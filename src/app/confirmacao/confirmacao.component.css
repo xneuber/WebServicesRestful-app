@@ -1,0 +1,25 @@
+.caixa {
+    height: 150px;
+}
+
+.img-top{
+    margin-left: 5px;
+}
+
+.titulo{
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.msg{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.img-btn{
+    margin-left: 58px;
+}
