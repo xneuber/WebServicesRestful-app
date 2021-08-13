@@ -1,32 +1,28 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-
-import { Curso } from './curso.model';
 import { CursoService } from './curso.service';
+import { Curso } from './curso.model';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.css']
 })
+export class CursosComponent implements OnInit {
 
-export class CursosComponent implements OnInit  {
-
-  cursos: any[] = [];
   curso: Curso = new Curso();
 
   cursoDataSource: MatTableDataSource<Curso>;
-  displayedCursos : String[] = ['idcurso', 'nomecurso',  'update', 'delete'];
-  
+  displayedCursos: String[] = ['idcurso', 'nomecurso', 'update', 'delete'];
+
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  
-  constructor(private cursoService: CursoService, 
-              private router: Router) { 
-  }
+
+  constructor(private cursoService: CursoService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getCursoList();
@@ -35,8 +31,8 @@ export class CursosComponent implements OnInit  {
   getCursoList() {
     this.cursoService.getCursoList()
       .subscribe(
-        data => {
-          this.cursoDataSource = new MatTableDataSource<Curso>(data);
+        dados => {
+          this.cursoDataSource = new MatTableDataSource<Curso>(dados);
           this.cursoDataSource.paginator = this.paginator;
           this.cursoDataSource.sort = this.sort;
         },
@@ -44,11 +40,26 @@ export class CursosComponent implements OnInit  {
       );
   }
 
-  navigateToCursoNovo(){
+  filtrarCursos(event: Event) {
+    let valor = (event.target as HTMLInputElement).value;
+    this.cursoDataSource.filter = valor;
+  }
+
+  deletarCurso(delcurso : Curso){
+    this.cursoService.deleteCurso(delcurso.idcurso)
+    .subscribe(
+      dados => {
+        this.cursoService.openSnackBar('Curso excluído !');
+        this.getCursoList();
+      }
+    )
+  }
+  
+  navigateToCursoNovo() {
     this.router.navigate(['/curso-novo']);
   }
 
-  navigateToCursoEditar(curso: Curso){
+  navigateToCursoEditar(curso: Curso) {
     this.router.navigate([`/curso-editar/${curso.idcurso}`]);
   }
 

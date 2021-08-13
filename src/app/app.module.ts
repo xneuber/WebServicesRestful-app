@@ -11,7 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -19,9 +19,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ScrollingModule } from '@angular/cdk/scrolling'; 
-
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -68,8 +66,7 @@ import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
     MatPaginatorModule,
     MatSortModule,
     MatInputModule,
-    ScrollingModule,
-    NgbModule    
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,4 @@
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-confirmacao',
@@ -8,27 +6,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./confirmacao.component.css']
 })
 export class ConfirmacaoComponent implements OnInit {
-  
-  @Input() title: string;
-  @Input() message: string;
-  @Input() btnOkText: string;
-  @Input() btnCancelText: string;
+    
+  message: string;
 
-  constructor(private activeModal: NgbActiveModal) { }
+  constructor() { }
 
-  ngOnInit() {
-  }
-
-  public cancelar() {
-    this.activeModal.close(false);
-  }
-
-  public confirmar() {
-    this.activeModal.close(true);
-  }
-
-  public fechar() {
-    this.activeModal.dismiss();
+  ngOnInit(): void {
   }
 
 }
