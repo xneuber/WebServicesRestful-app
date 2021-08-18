@@ -22,6 +22,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -77,7 +78,8 @@ import { AlunoEditarComponent } from './aluno/aluno-editar.component';
     MatInputModule,
     ScrollingModule,
     MatDatepickerModule,
-    MatSelectModule
+    MatSelectModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

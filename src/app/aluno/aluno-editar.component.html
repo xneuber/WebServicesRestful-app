@@ -16,19 +16,19 @@
     </mat-form-field>
   </div>
 
-  <!-- <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline">
     <mat-label>Data de Nascimento</mat-label>
     <input
-      matInput [matDatepicker]="picker">
-      placeholder="Data de Nascimento"
+      matInput
+      [matDatepicker]="picker"
+      placeholder="${aluno.dt_nasc}"
       id="dt_nasc"
       name="dt_nasc"
       [(ngModel)]="aluno.dt_nasc"
-      disabled
     />
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field> -->
+  </mat-form-field>
 
   <div>
     <mat-form-field appearance="outline">
