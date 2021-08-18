@@ -21,7 +21,7 @@ export class AlunoNovoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  salvar () {
+  salvar() {
     this.alunoService.createAluno(this.aluno)
     .subscribe(
       dado => {
@@ -32,8 +32,8 @@ export class AlunoNovoComponent implements OnInit {
     );
   }
 
-  cancelar () {
-this.router.navigate(['/alunos']);
+  cancelar() {
+  this.router.navigate(['/alunos']);
   }
 
 }
