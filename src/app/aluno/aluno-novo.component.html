@@ -9,19 +9,19 @@
       <input
         matInput
         placeholder="Digite o nome do aluno"
-        id="nomealuno"
+        id="nome"
         required
         [(ngModel)]="aluno.nome"
-        name="nomealuno"
+        name="nome"
       />
       <mat-icon matSuffix>edit</mat-icon>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Sexo</mat-label>
       <select
-        id="sexoaluno"
+        id="sexo"
         [(ngModel)]="aluno.sexo"
-        name="sexoaluno"
+        name="sexo"
         placeholder="Selecione o sexo"
       >
         <option value="Masculino">Masculino</option>
@@ -40,10 +40,10 @@
         matInput
         [matDatepicker]="picker"
         placeholder="nascimento"
-        id="nascimentoaluno"
+        id="nascimento"
         required
         [(ngModel)]="aluno.nome"
-        name="nascimentoaluno"
+        name="nascimento"
       />
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
