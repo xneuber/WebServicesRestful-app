@@ -20,6 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +36,8 @@ import { CursoEditarComponent } from './curso/curso-editar.component';
 import { ConfirmacaoComponent } from './confirmacao/confirmacao.component';
 import { AlunosComponent } from './aluno/alunos.component';
 import { AlunoNovoComponent } from './aluno/aluno-novo.component';
-import {  AlunoEditarComponent } from './aluno/aluno-editar.component';
+import { AlunoEditarComponent } from './aluno/aluno-editar.component';
+
 
 @NgModule({
   declarations: [
@@ -72,7 +74,8 @@ import {  AlunoEditarComponent } from './aluno/aluno-editar.component';
     MatPaginatorModule,
     MatSortModule,
     MatInputModule,
-    ScrollingModule
+    ScrollingModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

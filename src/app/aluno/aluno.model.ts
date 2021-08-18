@@ -1,6 +1,6 @@
-export class aluno-module.model.ts{
+export class Aluno {
   idaluno: number;
   nome: string;
   sexo: string;
-  dt_nasc: Date;
+  dtnasc: Date;
 }
