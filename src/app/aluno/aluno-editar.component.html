@@ -9,11 +9,37 @@
       <input
         matInput
         id="idaluno"
-        disabled
-        [(ngModel)]="aluno.idaluno"
         name="idaluno"
+        [(ngModel)]="aluno.idaluno"
+        disabled
       />
-      <mat-icon matSuffix>edit</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <!-- <mat-form-field appearance="outline">
+    <mat-label>Data de Nascimento</mat-label>
+    <input
+      matInput [matDatepicker]="picker">
+      placeholder="Data de Nascimento"
+      id="dt_nasc"
+      name="dt_nasc"
+      [(ngModel)]="aluno.dt_nasc"
+      disabled
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field> -->
+
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Nascimento</mat-label>
+      <input
+        matInput
+        id="dt_nasc"
+        name="dt_nasc"
+        [(ngModel)]="aluno.dt_nasc"
+        disabled
+      />
     </mat-form-field>
   </div>
 
@@ -25,42 +51,31 @@
     </mat-form-field>
   </div>
 
-  <div class="input2">
+  <div>
     <mat-form-field appearance="outline">
       <mat-label>Sexo</mat-label>
-      <select
+      <mat-select
         id="sexo"
         [(ngModel)]="aluno.sexo"
         name="sexo"
         placeholder="Selecione o sexo"
+        disableRipple
       >
-        <option value="Masculino">Masculino</option>
-        <option value="Feminino">Feminino</option>
-        <option value="Pessoa Trans">Pessoa trans</option>
-        <option value="Não binário">Não binário</option>
-        <option value="Nenhum dos anteriores">Nenhum dos anteriores</option>
-        <option value="Prefiro não informar">Prefiro não informar</option>
-      </select>
+        <mat-option value="Masculino">Masculino</mat-option>
+        <mat-option value="Feminino">Feminino</mat-option>
+        <mat-option value="Pessoa Trans">Pessoa trans</mat-option>
+        <mat-option value="Não binário">Não binário</mat-option>
+        <mat-option value="Nenhum dos anteriores"
+          >Nenhum dos anteriores</mat-option
+        >
+        <mat-option value="Prefiro não informar"
+          >Prefiro não informar</mat-option
+        >
+      </mat-select>
       <mat-icon matSuffix>edit</mat-icon>
     </mat-form-field>
   </div>
 
-  <div class="input2">
-    <mat-form-field appearance="outline">
-      <mat-label>Nascimento</mat-label>
-      <input
-        matInput
-        [matDatepicker]="picker"
-        placeholder="nascimento"
-        id="nascimento"
-        required
-        [(ngModel)]="aluno.dt_nasc"
-        name="nascimento"
-      />
-      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-  </div>
   <div class="button">
     <span class="bt" (click)="atualizar()">
       <img class="img-btn" src="assets/img/check_box.png" />Atualizar

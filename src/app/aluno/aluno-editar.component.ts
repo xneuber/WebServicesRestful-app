@@ -20,7 +20,7 @@ export class AlunoEditarComponent implements OnInit {
     this.getAluno(this.rotaAtiva.snapshot.paramMap.get('id'));
   }
 
-  getAluno = (id) => {
+  getAluno(id){
     this.alunoservice.getAluno(id)
       .subscribe(
         dado => {
@@ -33,7 +33,7 @@ export class AlunoEditarComponent implements OnInit {
       );
   }
 
-  atualizar = () => {
+  atualizar() {
     this.alunoservice.updateAluno(this.aluno.idaluno, this.aluno)
       .subscribe(
         dado => {
@@ -46,7 +46,7 @@ export class AlunoEditarComponent implements OnInit {
         });
   }
 
-  cancelar = () => {
+  cancelar() {
     this.router.navigate(['/alunos']);
   }
 }
