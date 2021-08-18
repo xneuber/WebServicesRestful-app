@@ -36,3 +36,13 @@
  th.mat-header-cell {
    text-align: left;
  }
+
+ .button{
+  width: 50%;
+  cursor: pointer;
+}
+
+.bt{
+  padding-right: 30px;
+  cursor: pointer;
+}
