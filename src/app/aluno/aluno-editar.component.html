@@ -16,33 +16,6 @@
     </mat-form-field>
   </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>Data de Nascimento</mat-label>
-    <input
-      matInput
-      [matDatepicker]="picker"
-      placeholder="${aluno.dt_nasc}"
-      id="dt_nasc"
-      name="dt_nasc"
-      [(ngModel)]="aluno.dt_nasc"
-    />
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-
-  <div>
-    <mat-form-field appearance="outline">
-      <mat-label>Nascimento</mat-label>
-      <input
-        matInput
-        id="dt_nasc"
-        name="dt_nasc"
-        [(ngModel)]="aluno.dt_nasc"
-        disabled
-      />
-    </mat-form-field>
-  </div>
-
   <div class="input2">
     <mat-form-field appearance="outline">
       <mat-label>Nome do Aluno</mat-label>
@@ -51,7 +24,14 @@
     </mat-form-field>
   </div>
 
-  <div>
+  <div class="input2">
+    <mat-form-field appearance="outline">
+      <mat-label> Data de nascimento </mat-label>
+      <input matInput id="dt_nasc" name="dt_nasc" [(ngModel)]="aluno.dt_nasc" />
+    </mat-form-field>
+  </div>
+
+  <div class="input2">
     <mat-form-field appearance="outline">
       <mat-label>Sexo</mat-label>
       <mat-select
@@ -74,14 +54,14 @@
       </mat-select>
       <mat-icon matSuffix>edit</mat-icon>
     </mat-form-field>
-  </div>
 
-  <div class="button">
-    <span class="bt" (click)="atualizar()">
-      <img class="img-btn" src="assets/img/check_box.png" />Atualizar
-    </span>
-    <span class="bt" (click)="cancelar()">
-      <img class="img-btn" src="assets/img/cancel.png" />Cancelar
-    </span>
+    <div class="button">
+      <span class="bt" (click)="atualizar()">
+        <img class="img-btn" src="assets/img/check_box.png" />Atualizar
+      </span>
+      <span class="bt" (click)="cancelar()">
+        <img class="img-btn" src="assets/img/cancel.png" />Cancelar
+      </span>
+    </div>
   </div>
 </div>
