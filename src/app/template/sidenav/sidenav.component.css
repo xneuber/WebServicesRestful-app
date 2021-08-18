@@ -9,7 +9,22 @@
     color: white;
 }
 
-.nav-list{
-    padding-left: 10px;
-    vertical-align: text-top;
+.menu-buttom{
+  padding-left: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border-spacing: 0;
+  vertical-align: middle;
+
+}
+
+.material-icons{
+  vertical-align: middle;
+  color: white;
+}
+
+.menu-buttom:hover{
+  border-radius: 1;
+  background-color: #E0E0E0;
+  color: black;
 }
